@@ -12,6 +12,11 @@
     font-display: swap;
 }
 
+html {
+    font-size: 62.5%;
+    /** we do this to make 1rem=10px ,default is 1rem=16px */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,14 +24,17 @@
     box-sizing: border-box;
     outline: none;
 }
+
 a {
     text-decoration: none;
 }
 
 ul {
     list-style: none;
+    margin-bottom: 0;
 }
 
 body {
-    min-height: 100vh;
+    font-size: 1.6rem;
+    /** we do this to make 1rem=10px ,default is 1rem=16px */
 }
