@@ -12,6 +12,11 @@
     font-display: swap;
 }
 
+:root {
+    --main-color: #353353;
+    --main-yellow: #f9d74c;
+}
+
 html {
     font-size: 62.5%;
     /** we do this to make 1rem=10px ,default is 1rem=16px */
@@ -36,5 +41,29 @@ ul {
 
 body {
     font-size: 1.6rem;
+    background-color: var(--main-color);
     /** we do this to make 1rem=10px ,default is 1rem=16px */
 }
+
+/** common classes */
+
+/** intro */
+
+.sidebar {
+    height: 100vh;
+    background-color: var(--main-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #ffffff1a;
+}
+
+.main {
+    padding: 10px;
+}
+
+.sidebar-wrapper {
+    padding: 40px;
+    height: 100%;
+}
+
