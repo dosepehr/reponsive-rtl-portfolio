@@ -29,4 +29,10 @@
     .skills button{
         margin-bottom: 20px;
     }
+    .service{
+        width: 70%;
+    }
+    .service:nth-child(2){
+        margin: 30px 0;
+    }
 }
