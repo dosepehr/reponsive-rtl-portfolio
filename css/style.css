@@ -15,6 +15,7 @@
 :root {
     --main-color: #353353;
     --main-yellow: #f9d74c;
+    --main-red: #FF4C60;
 }
 
 html {
@@ -46,7 +47,9 @@ body {
 }
 
 /** common classes */
-
+.text-red{
+    color: var(--main-red);
+}
 /** intro */
 
 .sidebar {
@@ -65,5 +68,27 @@ body {
 .sidebar-wrapper {
     padding: 40px;
     height: 100%;
+}
+
+.sidebar-item {
+    display: flex;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.sidebar-icon {
+    fill: var(--main-yellow);
+    font-size: 200px;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.copyright {
+    color: #9C9AB3;
+    font-size: 1.4rem;
+    white-space: nowrap;
 }
 
