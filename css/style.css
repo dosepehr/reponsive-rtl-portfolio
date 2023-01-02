@@ -18,7 +18,8 @@
     --main-yellow: #f9d74c;
     --main-red: #FF4C60;
     --main-gray: #F1F1F1;
-    --main-blue:#6c6ce5;
+    --main-blue: #6c6ce5;
+    --secondary-gray:#d7d7e2;
 }
 
 html {
@@ -226,22 +227,47 @@ body {
     border-radius: 15px;
     background-color: var(--main-gray);
 }
-.inner-bar{
+
+.inner-bar {
     height: 7px;
     border-radius: 15px;
 }
-#graphic{
+
+#graphic {
     background-color: var(--main-yellow);
     width: 85%;
 }
-#web{
+
+#web {
     background-color: var(--main-red);
     width: 95%;
 }
-#photo{
+
+#photo {
     background-color: var(--main-blue);
     width: 70%;
 }
-.bar p{
+
+.bar p {
     margin-bottom: 15px;
+}
+
+/** counts */
+.counts{
+    margin-top: 50px;
+}
+.count-icon {
+    fill: var(--secondary-gray);
+    width: 36px;
+    height: 36px;
+    margin-left: 20px;
+}
+.count{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary-gray);
+}
+.count-title{
+    color: var(--secondary-gray);
+    font-weight: 800;
 }
