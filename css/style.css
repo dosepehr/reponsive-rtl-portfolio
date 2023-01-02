@@ -30,7 +30,9 @@ html {
     box-sizing: border-box;
     outline: none;
 }
-
+p{
+    margin-bottom: 0;
+}
 a {
     text-decoration: none;
 }
@@ -50,7 +52,13 @@ body {
 .text-red{
     color: var(--main-red);
 }
-/** intro */
+.bg-red{
+    background-color: var(--main-red);
+}
+.text-white{
+    color: #ffffff;
+}
+/** sidebar */
 
 .sidebar {
     height: 100vh;
@@ -63,6 +71,9 @@ body {
 
 .main {
     padding: 10px;
+    position: absolute;
+    right: 25%;
+    top: 0;
 }
 
 .sidebar-wrapper {
@@ -91,4 +102,25 @@ body {
     font-size: 1.4rem;
     white-space: nowrap;
 }
+/** intro section */
+.intro{
+    height: 100vh;
+}
+.main-btn{
+    padding: 12px 32px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+}
 
+.intro-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro-icons svg{
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+    margin: 0 10px;
+}

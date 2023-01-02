@@ -2,5 +2,9 @@
 .sidebar{
     display: none;
 }
+.main{
+    width: 100%;
+    right: 0;
+}
     
 }
