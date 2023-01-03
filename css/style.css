@@ -476,3 +476,51 @@ body {
 .work-item:hover .work-icon {
     opacity: 1;
 }
+
+/** pricing  */
+.price-item{
+    background-color: var(--secondary-color);
+    width: 32%;
+    padding: 20px;
+    border-radius: 25px;
+    align-items: center;
+    position: relative;
+}
+.price-item:nth-child(2){
+    padding: 40px 20px
+}
+.price-item img{
+    width: 70px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.price-title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+.support{
+    margin: 20px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.price{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+.price span{
+    margin: 0px 10px;
+}
+.recommend{
+    background-color: var(--main-blue);
+    color: #fff;
+    padding: 5px;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 23px;
+    right: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}

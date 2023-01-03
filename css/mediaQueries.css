@@ -54,14 +54,23 @@
         width: calc(50% - 30px);
         margin-bottom: 40px;
     }
+
+    .price-item {
+        width: 70%;
+    }
+    .price-item:nth-child(2){
+        margin: 20px 0;
+    }
 }
+
 @media (max-width:575.98px) {
     .work-item {
         width: calc(100% - 50px);
         margin: 0 auto;
         margin-bottom: 40px;
-    }    
-    .works-list{
+    }
+
+    .works-list {
         display: none;
     }
 }
