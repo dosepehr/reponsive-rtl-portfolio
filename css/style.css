@@ -183,7 +183,7 @@ body {
 .section-title {
     font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin: 50px 0;
 }
 
 .section-title::before {
@@ -347,13 +347,16 @@ body {
     padding-right: 30px;
     /* margin-top: 50px; */
 }
-.exp-items:nth-child(1){
+
+.exp-items:nth-child(1) {
     margin-top: 0;
 }
+
 .exp-detail {
     margin-bottom: 30px;
     margin-top: 40px;
 }
+
 .exp-title {
     margin: 10px 0;
     font-size: 2rem;
@@ -364,11 +367,112 @@ body {
     color: var(--some-purple-color);
     font-size: 1.4rem;
 }
-.exp-icon{
+
+.exp-icon {
     width: 20px;
     height: 20px;
     fill: var(--main-red);
 }
-.firstexp{
+
+.firstexp {
     margin-top: 0;
+}
+
+/** works */
+.works-list {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.work-select {
+    margin-right: 20px;
+}
+
+.work-item {
+    width: calc(33% - 20px);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.work-img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.works-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(123, 123, 225);
+    opacity: 0;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.work-title {
+    font-size: 2rem;
+    position: relative;
+    top: 30%;
+    right: 10%;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.ribbon {
+    background-color: var(--main-red);
+    padding: 5px;
+    width: fit-content;
+    position: relative;
+    right: 10%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    top: -20%;
+    transition: all 0.3s ease;
+}
+
+.work-icon {
+    background-color: var(--main-yellow);
+    border-radius: 50%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;  
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.work-icon svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+.works-overlay:hover {
+    opacity: 0.93;
+}
+
+.work-item:hover .work-img {
+    scale: 1.1;
+}
+
+.work-item:hover .work-title {
+    top: 20%;
+    opacity: 1;
+}
+.work-item:hover .ribbon{
+    top: 0;
+}
+.work-item:hover .work-icon {
+    opacity: 1;
 }
