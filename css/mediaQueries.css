@@ -1,6 +1,14 @@
 @media (max-width:991.98px) {
     .sidebar {
-        display: none;
+        right: -300px;
+        position: fixed;
+        transition: all 0.5s ease;
+        z-index: 1000;
+        width: 250px;
+    }
+
+    .sidebar.active {
+        right: -10px;
     }
 
     .main {
@@ -8,7 +16,19 @@
         right: 0;
     }
 
+    .ham {
+        display: flex;
+    }
+
+    .close {
+        display: block;
+    }
+
 }
+
+
+
+
 
 @media (max-width:767.98px) {
     .about-wrapper {
@@ -58,8 +78,22 @@
     .price-item {
         width: 70%;
     }
-    .price-item:nth-child(2){
+
+    .price-item:nth-child(2) {
         margin: 20px 0;
+    }
+
+    .post {
+        width: 70%;
+        margin-top: 30px;
+    }
+
+    .email-info {
+        margin-bottom: 40px;
+    }
+
+    .counts-wrapper div {
+        margin-top: 15px;
     }
 }
 
@@ -73,4 +107,29 @@
     .works-list {
         display: none;
     }
+
+    .forms-div {
+        flex-direction: column;
+    }
+
+    .forms-div input {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .counts-wrapper div {
+        margin-top: 15px;
+    }
+
+    .counts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .counts-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }

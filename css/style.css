@@ -52,6 +52,7 @@ ul {
 body {
     font-size: 1.6rem;
     background-color: var(--main-color);
+    overflow-x: hidden;
     /** we do this to make 1rem=10px ,default is 1rem=16px */
 }
 
@@ -68,6 +69,10 @@ body {
     color: #ffffff;
 }
 
+.text-purple {
+    color: var(--some-purple-color);
+}
+
 .margin-0-auto {
     margin: 0 auto;
 }
@@ -79,7 +84,7 @@ body {
 /** sidebar */
 
 .sidebar {
-    height: 100vh;
+    height: 103vh;
     background-color: var(--main-color);
     position: fixed;
     top: 0;
@@ -345,7 +350,6 @@ body {
 .exp-items {
     border-right: 1px solid var(--main-red);
     padding-right: 30px;
-    /* margin-top: 50px; */
 }
 
 .exp-items:nth-child(1) {
@@ -386,6 +390,13 @@ body {
 
 .work-select {
     margin-right: 20px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.work-select.select {
+    color: var(--main-red) !important;
 }
 
 .work-item {
@@ -394,6 +405,14 @@ body {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
+    transition: all 0.3s ease;
+    visibility: visible;
+}
+
+
+.work-item.unselected {
+    scale: 0;
+    visibility: hidden;
 }
 
 .work-img {
@@ -447,7 +466,7 @@ body {
     padding: 10px;
     position: absolute;
     bottom: 20px;
-    right: 30px;  
+    right: 30px;
     opacity: 0;
     transition: all 0.3s ease;
 }
@@ -470,15 +489,17 @@ body {
     top: 20%;
     opacity: 1;
 }
-.work-item:hover .ribbon{
+
+.work-item:hover .ribbon {
     top: 0;
 }
+
 .work-item:hover .work-icon {
     opacity: 1;
 }
 
 /** pricing  */
-.price-item{
+.price-item {
     background-color: var(--secondary-color);
     width: 32%;
     padding: 20px;
@@ -486,34 +507,40 @@ body {
     align-items: center;
     position: relative;
 }
-.price-item:nth-child(2){
+
+.price-item:nth-child(2) {
     padding: 40px 20px
 }
-.price-item img{
+
+.price-item img {
     width: 70px;
     height: 80px;
     object-fit: cover;
 }
 
-.price-title{
+.price-title {
     font-size: 2rem;
     font-weight: 700;
     margin: 20px 0;
 }
-.support{
+
+.support {
     margin: 20px 0;
     font-size: 1.5rem;
     font-weight: 700;
 }
-.price{
+
+.price {
     font-size: 3rem;
     font-weight: 700;
     margin: 20px 0;
 }
-.price span{
+
+.price span {
     margin: 0px 10px;
 }
-.recommend{
+
+.recommend {
     background-color: var(--main-blue);
     color: #fff;
     padding: 5px;
@@ -523,4 +550,160 @@ body {
     right: 10px;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
+}
+
+/** posts */
+.post {
+    width: calc(33% - 20px);
+    background-color: var(--secondary-color);
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+
+}
+
+.post:hover .post-img {
+    scale: 1.1;
+}
+
+.post img {
+    top: 0;
+    width: 100%;
+    height: 60%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: all 0.3s ease;
+
+}
+
+.post-details {
+    padding: 10px;
+    margin-right: 15px;
+}
+
+.post-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.post-date {
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+
+.post-writer {
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+
+.post-ribbon {
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    padding: 5px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    right: 20px;
+}
+
+/** contact */
+.forms-div {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.forms-div input {
+    width: calc(50% - 10px);
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+.form-title {
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 20px 0;
+}
+
+.form-text {
+    height: 150px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.form-btn {
+    margin-top: 20px;
+}
+
+.email-info p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--some-purple-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+
+/** ham menu */
+
+.ham {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+.ham span {
+    padding: 1px;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.ham span:nth-child(2) {
+    margin: 5px 0;
+}
+
+/** close btn */
+.close {
+    position: absolute;
+    left: 32px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+
+
+.close:before,
+.close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #fff;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
 }
