@@ -25,7 +25,6 @@ body.onscroll = () => {
 //!select section codes
 const selectors = document.querySelectorAll('.work-select');
 const work_items = document.querySelectorAll('.work-item');
-console.log(selectors);
 selectors.forEach((selector) => {
     selector.onclick = () => {
         selectors.forEach((selector) => {
@@ -59,3 +58,19 @@ selectors.forEach((selector) => {
     };
 });
 
+// ! iam
+const iam = document.querySelector('.iam');
+const skills = ['طراح وب', 'گرافیست', 'عکاس و فیلمبردار'];
+
+
+const changeSkills = () => {
+    let i = 0;
+    setInterval(() => {
+        if (i == skills.length) {
+            i = 0;
+        }
+        iam.innerHTML = skills[i];
+        i++;
+    }, 2000);
+}
+changeSkills();
